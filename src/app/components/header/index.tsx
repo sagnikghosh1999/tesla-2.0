@@ -46,7 +46,6 @@ const VEHICLE_ITEMS = [
   "Roadster",
 ];
 
-const bodyContent = {};
 const Header = () => {
   const [show, setShow] = useState(false);
   const [item, setItem] = useState<string | null>(null);
@@ -118,12 +117,12 @@ const Header = () => {
       <div
         className={` ${
           show
-            ? "bg-white overflow-x-hidden z-[100]  overflow-y-scroll translate-y-[0%] duration-500 drop-shadow-[0_35px_135px_rgba(0,0,0,0.5)] px-6 pt-6 h-1/2 fixed w-full  md:h-[60%]  left-0 top-0"
-            : "bg-white  -translate-y-[300%] duration-500 drop-shadow-[0_35px_135px_rgba(0,0,0,0.5)] px-6 pt-6 h-1/2 fixed w-full left-0 top-0"
+            ? "bg-white overflow-hidden z-[100]  translate-y-[0%] duration-500 drop-shadow-[0_35px_135px_rgba(0,0,0,0.5)] px-6 pt-6 h-full fixed w-full  md:h-[500px]  left-0 top-0"
+            : "bg-white  -translate-y-[300%] duration-500 drop-shadow-[0_35px_135px_rgba(0,0,0,0.5)] px-6 pt-6 h-full fixed w-full left-0 top-0"
         }`}
         id="header-menu-wrapper"
       >
-        <BodyContent />
+        <BodyContent item={item} />
       </div>
     </div>
   );
