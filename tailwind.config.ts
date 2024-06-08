@@ -14,6 +14,9 @@ const config: Config = {
       ms: "380px",
       // => @media (min-width: 380px) { ... }
 
+      msx: "450px",
+      // => @media (min-width: 450px) { ... }
+
       xm: "500px",
       // => @media (min-width: 500px) { ... }
 

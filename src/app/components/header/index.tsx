@@ -100,11 +100,17 @@ const Header = () => {
 
           <Link
             href={"/"}
-            className="font-medium py-0.5 px-2 hover:bg-gray-200  rounded transition duration-300 ease-in flex-nowrap cursor-pointer"
-            id="toggle-sidebar"
+            className="font-medium py-0.5 px-2 hover:bg-gray-200  rounded transition duration-300 ease-in flex-nowrap cursor-pointer hidden md:inline-flex"
           >
             <HiOutlineUserCircle size={24} />
           </Link>
+          <button
+            className="font-medium py-0.5 px-2 hover:bg-gray-200  rounded transition duration-300 ease-in flex-nowrap cursor-pointer md:hidden"
+            onClick={() => setShow((prev) => !prev)}
+            id="toggle-sidebar"
+          >
+            Menu
+          </button>
         </div>
       </div>
 
@@ -117,7 +123,7 @@ const Header = () => {
       <div
         className={` ${
           show
-            ? "bg-white overflow-hidden z-[100]  translate-y-[0%] duration-500 drop-shadow-[0_35px_135px_rgba(0,0,0,0.5)] px-6 pt-6 h-full fixed w-full  md:h-[500px]  left-0 top-0"
+            ? "bg-white overflow-x-hidden overflow-y-scroll xl:overflow-hidden z-[100]  translate-y-[0%] duration-500 drop-shadow-[0_35px_135px_rgba(0,0,0,0.5)] px-2 md:px-6 pt-6 h-full fixed w-full  xl:h-[500px]  left-0 top-0"
             : "bg-white  -translate-y-[300%] duration-500 drop-shadow-[0_35px_135px_rgba(0,0,0,0.5)] px-6 pt-6 h-full fixed w-full left-0 top-0"
         }`}
         id="header-menu-wrapper"
